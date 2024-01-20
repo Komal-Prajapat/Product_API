@@ -4,9 +4,14 @@ import dotenv from 'dotenv'
 import { productRoute } from "./route/products.js";
 import bodyParser from "body-parser";
 import { UserRoute } from "./route/user.js";
+import cors from 'cors'
 const app = express();
 
-
+app.use(cors({
+origin:"http://localhost:5173",
+methods:["GET","POST","PUT","DELETE"],
+credentials:true
+}))
 
 app.use
 (bodyParser.json());
