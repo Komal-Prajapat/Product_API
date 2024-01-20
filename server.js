@@ -21,6 +21,16 @@ app.use("/api",productRoute)
 app.use("/api" , UserRoute)
 // server
 // const port = process.env.PORT;
+
+//Home Route
+
+app.use("/", (req, res) => {
+    // console.log("This is home page")
+    res.json({ message: "This is home page" });
+});
+
+
+
  const port = 9030;
 
 app.listen(port,(req,res)=>{
